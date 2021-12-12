@@ -1,0 +1,11 @@
+<ol> <% @all.each do |number| %> 
+<li> 
+<ul>
+ <li>Индекс:<%= number.index %></li> 
+ <li> Число <%= number.num %></li> 
+ <li>Обратная запись<%= number.rev %></li> 
+ <li>Теория<%= number.theory %></li> 
+ </ul> 
+ </li>
+
+<% end %> </ol>

@@ -1,0 +1,37 @@
+<%= form_with(model: polyndrom) do |form| %>
+  <% if polyndrom.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(polyndrom.errors.count, "error") %> prohibited this polyndrom from being saved:</h2>
+
+      <ul>
+        <% polyndrom.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :index %>
+    <%= form.number_field :index %>
+  </div>
+
+  <div class="field">
+    <%= form.label :num %>
+    <%= form.number_field :num %>
+  </div>
+
+  <div class="field">
+    <%= form.label :rev %>
+    <%= form.number_field :rev %>
+  </div>
+
+  <div class="field">
+    <%= form.label :theory %>
+    <%= form.text_field :theory %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

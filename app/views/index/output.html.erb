@@ -1,0 +1,19 @@
+<div class="text-center border border-light p-5"> 
+<p class="h4 mb-4"> Вывод результатов</p>
+ <p >Промежуточные результаты: </p>
+  <table class="table"> <%i = 1%> 
+  <tr> <th>Номер итерации</th>
+   <th>Число</th>
+    <th>Обратная запись</th>
+     <th>Теория</th> </tr> <%i = 1%>
+     <%if (@result!=nil)%>
+      <% @result[0].each do %>
+       <tr>
+        <td> <%=i%> </td>
+         <td> <%=@result[1][i-1] %> 
+         </td> <td> <%=@result[2][i-1] %> 
+         </td> <td> <%=@result[3][i-1] %> </td>
+          </tr> <%i = i + 1%> <% end %>
+          <%end%>
+ </table>
+  </div>
