@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_12_010221) do
+ActiveRecord::Schema.define(version: 2021_12_12_192221) do
 
   create_table "polyndroms", force: :cascade do |t|
     t.integer "param"
-    t.integer "index"
-    t.integer "num"
-    t.integer "rev"
+    t.string "index"
+    t.string "num"
+    t.string "rev"
     t.string "theory"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

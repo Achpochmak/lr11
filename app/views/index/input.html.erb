@@ -1,10 +1,19 @@
-<form action = "<%= index_output_url %>" method = "post" class="text-center border border-light p-5"> 
-<p class="h4 mb-4">Ввод значения</p>
+<form action = "<%= index_output_url %>" method = "post" class="text border border-light p-2"> 
+<h2>Проверка полиндрома</h2>
+<p>Существует гипотеза, что для любого натурального числа, если оно
+не палиндром, можно получить палиндром за конечное число шагов по
+следующей схеме. Меняем порядок его цифр на обратный и складываем исходное число с
+получившимся. Если сумма не палиндром, то над
+ней повторяется то же действие и так до тех пор, пока не получится
+палиндром.
+<p> Написать программу, подтверждающую эту гипотезу и выводящую результаты на каждом
+шаге в формате: номер шага, текущее
+значение, указание подтверждена ли гипотеза или нет.
 
-<p class="text-justify">Polyndrom</p> 
 <div class = 'row'>
- <input name ="num" type="number" min ="3" max="10000" required value = "4" step = "any" placeholder="Ваше число" class="form-control"> 
- <input class="btn btn-outline-primary btn-block my-4" type="submit" value="Вычислить"> </div> </form> <form action="<%= index_show_url %>" method="get" class="text-center border border-light p-5">
+ <input name ="num" type="number"  required  step = "any" placeholder="Ваше число" class="form-control" style="margin-bottom: 20px"> 
+ <input class="btn btn-primary " type="submit" value="Вычислить"> </div> </form>
+  <form action="<%= index_show_url %>" method="get" class="text border border-light p-2">
   <div class = 'row'>
-   <input class="btn btn-outline-primary btn-block my-4" type="submit" value="Показать базу данных"> </div>
+   <input class="btn btn-primary " type="submit" value="Показать базу данных"> </div>
  </form>
